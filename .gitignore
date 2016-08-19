@@ -1,33 +1,70 @@
-# Object files
+#
+# NOTE! Don't add files that are generated in specific
+# subdirectories here. Add them in the ".gitignore" file
+# in that subdirectory instead.
+#
+# Normal rules
+#
+.*
+*.gdb
 *.o
-*.ko
-*.obj
-*.elf
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
 *.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
+*.s
+*.ko
 *.so
-*.so.*
-*.dylib
+*.mod.c
+*~
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+#
+# Our programs
+#
+/doc_loadbios
+/docfdisk
+/flash_erase
+/flash_info
+/flash_lock
+/flash_otp_dump
+/flash_otp_info
+/flash_otp_lock
+/flash_otp_write
+/flash_unlock
+/flashcp
+/ftl_check
+/ftl_format
+/jffs2dump
+/jffs2reader
+/mkfs.jffs2
+/mtd_debug
+/mtdpart
+/nanddump
+/nandtest
+/nandwrite
+/nftl_format
+/nftldump
+/recv_image
+/rfddump
+/rfdformat
+/serve_image
+/sumtool
 
-# Debug files
-*.dSYM/
-*.su
+#
+# Top-level generic files
+#
+
+#
+# git files that we don't want to ignore even it they are dot-files
+#
+!.gitignore
+
+#
+# Generated include files
+#
+/include/version.h
+
+# stgit generated dirs
+patches-*
+*.patch
+
+# cscope files
+cscope.*
+ncscope.*
